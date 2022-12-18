@@ -8,7 +8,8 @@ module.exports = {
       },
       backgroundImage: {
         'hero': "url('/public/images/loginBackground.png')",
-      }
+        'home': "url('/public/images/home.png')",
+      },
     },
   },
   plugins: [

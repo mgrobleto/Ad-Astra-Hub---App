@@ -1,6 +1,6 @@
-import { async } from "@firebase/util"
-import { useNavigate } from "react-router-dom"
+//import { useNavigate } from "react-router-dom"
 import { useAuth } from "../context/authContext"
+import NavBar from "./NavBar"
 
 const Home = () => {
 
@@ -17,9 +17,9 @@ const Home = () => {
 
   return (
     <>
-      <h1>Welcome {user.email}</h1>
-
-      <button onClick={handleLogout}>LogOut</button>
+      <div className="bg-home bg-center min-h-full sm:px-6">
+        <NavBar logout={handleLogout}/>
+      </div>
     </>
   )
 }

@@ -7,7 +7,7 @@ import { AuthProvider } from './context/authContext';
 
 const App = () => {
   return (
-    <div className='bg-slate-300 h-screen'>
+    <div className='h-screen'>
       <AuthProvider>
         <Routes>
           <Route path="/" element={
@@ -15,7 +15,7 @@ const App = () => {
               <Home />
             </ProtectedRoute>
           } />
-          <Route path="/login"  element={<Login />} />
+          <Route path="/login"  element={ <Login />} />
           <Route path="/register" element={<Register />} />
         </Routes>
       </AuthProvider> 

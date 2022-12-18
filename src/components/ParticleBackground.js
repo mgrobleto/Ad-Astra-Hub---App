@@ -1,4 +1,4 @@
-import { useCallback } from "react";
+//import { useCallback } from "react";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles"
 //import { loadStarsPreset } from "tsparticles-preset-stars";
@@ -11,7 +11,7 @@ const ParticleBackground = () => {
     };
 
     const particlesLoaded = async (container) => {
-        await console.log(container);
+        console.log(container);
     };
 
   return (
@@ -21,9 +21,10 @@ const ParticleBackground = () => {
     loaded={particlesLoaded}
     options={{
         interactivity: {
+            detect_on: "canvas",
             events: {
                 onClick: {
-                    enable: true,
+                    enable: false,
                     mode: "push",
                 },
                 onHover: {
@@ -50,7 +51,7 @@ const ParticleBackground = () => {
                 color: "#ffffff",
                 distance: 150,
                 enable: true,
-                opacity: 0.5,
+                opacity: 0.4,
                 width: 1,
             },
             collisions: {
@@ -63,7 +64,7 @@ const ParticleBackground = () => {
                     default: "bounce",
                 },
                 random: false,
-                speed: 3,
+                speed: 2,
                 straight: false,
             },
             number: {
@@ -71,10 +72,10 @@ const ParticleBackground = () => {
                     enable: true,
                     area: 900,
                 },
-                value: 60,
+                value: 40,
             },
             opacity: {
-                value: 0.5,
+                value: 0.4,
             },
             shape: {
                 type: "circle",
